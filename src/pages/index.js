@@ -23,17 +23,21 @@ const IndexPage = ({data}) => {
     }
   }
 
-  const output = renderRichText(articles[0].node.content, options)
   return (
     <Layout>
       <Seo title="Home" />
       {
-        articles.map(article => (
-          <div key={article.node.title}>
-            <h1>{article.node.title}</h1>
-            <div>{output}</div>
-          </div>
-        ))
+
+        articles.map(article => {
+          const output = renderRichText(article.node.content, options)
+
+          return (
+            <div key={article.node.title}>
+              <h1>{article.node.title}</h1>
+              <div>{output}</div>
+            </div>
+          )
+        })
       }
       <StaticImage
         src="../images/gatsby-astronaut.png"
