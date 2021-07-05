@@ -36,6 +36,5 @@ module.exports = {
         accessToken: 'GI7_YkOigIFBW2azi5VOOv-MPIzYw2YgRuTqAtrOZaU',
       },
     },
-    `@contentful/gatsby-transformer-contentful-richtext`,
 ],
 }

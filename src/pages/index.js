@@ -29,8 +29,8 @@ const IndexPage = ({data}) => {
       <Seo title="Home" />
       {
         articles.map(article => (
-          <div key={article.title}>
-            <h1>{article.title}</h1>
+          <div key={article.node.title}>
+            <h1>{article.node.title}</h1>
             <div>{output}</div>
           </div>
         ))
@@ -75,6 +75,7 @@ export const query = graphql`
             title
           }
         }
+        title
       }
     }
   }
