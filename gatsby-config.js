@@ -29,8 +29,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-  ],
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: 'mq5sqv2cl9e5',
+        accessToken: 'GI7_YkOigIFBW2azi5VOOv-MPIzYw2YgRuTqAtrOZaU',
+      },
+    },
+    `@contentful/gatsby-transformer-contentful-richtext`,
+],
 }
